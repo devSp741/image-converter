@@ -1,0 +1,160 @@
+/* General Styles */
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Navbar Styling */
+#app-navbar {
+    background-color: var(--bs-body-bg); /* Use Bootstrap's theme background */
+    transition: background-color 0.3s ease;
+}
+
+/* Card Styling */
+.converter-card {
+    transition: box-shadow 0.3s ease;
+}
+
+.converter-card:hover {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Drop Zone */
+.drop-zone {
+    border-style: dashed !important;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    cursor: pointer;
+}
+
+.drop-zone:hover {
+    background-color: var(--bs-secondary-bg);
+    border-color: var(--bs-primary) !important;
+}
+
+.drop-zone.drag-over {
+    background-color: var(--bs-success-bg-subtle);
+    border-color: var(--bs-success) !important;
+    transform: scale(1.02);
+}
+
+/* Preview Item */
+.preview-item {
+    position: relative;
+    border: 1px solid var(--bs-border-color);
+    border-radius: var(--bs-border-radius);
+    padding: 0.5rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background-color: var(--bs-tertiary-bg);
+}
+
+.preview-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.preview-item img {
+    width: 100%;
+    height: 100px; /* Fixed height for consistency */
+    object-fit: contain; /* Use contain to avoid cropping */
+    display: block;
+    margin-bottom: 0.5rem;
+    background-color: var(--bs-body-bg); /* Background for transparent images */
+    border-radius: calc(var(--bs-border-radius) * .8);
+}
+
+.preview-item .file-info {
+    font-size: 0.8rem;
+    line-height: 1.2;
+    word-break: break-all; /* Prevent long names overflowing */
+    margin-bottom: 0.2rem;
+}
+.preview-item .file-size {
+    font-size: 0.75rem;
+    color: var(--bs-secondary-text);
+}
+
+.preview-item .remove-btn {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--bs-danger);
+    color: white;
+    border: none;
+    font-size: 0.8rem;
+    line-height: 20px; /* Center icon vertically */
+    text-align: center;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    padding: 0; /* Remove default button padding */
+}
+
+.preview-item .remove-btn:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* Quality Slider Appearance */
+#quality-control label {
+    display: block; /* Ensure label is above the range input */
+}
+
+/* Progress Bar Animation */
+.progress-bar-animated {
+    animation: progress-bar-stripes 1s linear infinite !important;
+}
+
+/* Download Link Item */
+.download-link-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.2s ease;
+}
+.download-link-item:hover {
+    background-color: var(--bs-tertiary-bg);
+}
+
+.download-link-item .file-details span {
+    display: block;
+    font-size: 0.9rem;
+}
+.download-link-item .file-details .original-size {
+    font-size: 0.8rem;
+    color: var(--bs-secondary-text);
+}
+
+.download-link-item .btn-download {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.9rem;
+}
+
+/* Animations */
+.fade-in {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Dark Mode Specific Styles (using Bootstrap 5.3+ data attribute) */
+[data-bs-theme="dark"] .drop-zone:hover {
+    background-color: #343a40; /* Darker hover */
+}
+
+[data-bs-theme="dark"] .drop-zone.drag-over {
+    background-color: #2b3035; /* Darker dragover */
+    border-color: var(--bs-success) !important;
+}
+
+[data-bs-theme="dark"] .preview-item img {
+     background-color: #495057; /* Darker bg for transparent images */
+}
+
+[data-bs-theme="dark"] .download-link-item:hover {
+    background-color: #343a40;
+}
