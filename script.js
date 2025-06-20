@@ -462,9 +462,6 @@ $(document).ready(() => {
             </div>`;
         $downloadLinks.append(downloadHtml);
 
-        // Optional: Revoke URL after some time or on clear? For simplicity, we don't here.
-        // Be mindful of memory if converting hundreds of large files.
-        // setTimeout(() => URL.revokeObjectURL(url), 60000); // Example: Revoke after 1 minute
     }
 
     function displayErrorLink(fileData, errorMessage) {

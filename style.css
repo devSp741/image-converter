@@ -147,14 +147,26 @@ body {
 }
 
 [data-bs-theme="dark"] .drop-zone.drag-over {
-    background-color: #2b3035; /* Darker dragover */
+    background-color: #2b3035; 
     border-color: var(--bs-success) !important;
 }
 
 [data-bs-theme="dark"] .preview-item img {
-     background-color: #495057; /* Darker bg for transparent images */
+     background-color: #495057; 
 }
 
 [data-bs-theme="dark"] .download-link-item:hover {
     background-color: #343a40;
+}
+@media (max-width: 575.98px) {
+    .download-link-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .download-link-item .btn-download {
+        align-self: stretch; 
+        text-align: center;
+    }
 }
