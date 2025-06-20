@@ -181,3 +181,12 @@ body {
         text-align: center;
     }
 }
+footer small a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+footer small a:hover {
+    color: #0d6efd;
+    text-decoration: none;
+}
