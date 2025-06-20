@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Free Image Converter - Convert All Image Formats Online</title>
+
+    <!-- SEO Meta Tags -->
     <meta name="description" content="Convert images online for free with Pixel Perfect Converter. We do not store your data – images are processed and deleted instantly. Support for JPG, PNG, WebP, BMP, GIF, and more.">
     <meta name="keywords" content="image converter, free image converter, convert JPG PNG WebP, image conversion tool, online image converter, image resize, image quality control, image format conversion">
+    <link rel="canonical" href="https://devsp741.github.io/image-converter/">
 
+    <!-- Open Graph / Social Media Meta Tags -->
     <meta property="og:title" content="Free Image Converter - Convert All Image Formats Online">
     <meta property="og:description" content="Convert all image formats for free with Pixel Perfect Converter. Your privacy is our priority – no data is saved.">
-    <meta property="og:image" content="./assets/favicon-32x32.png">
+    <meta property="og:image" content="assets/favicon-32x32.png">
     <meta property="og:url" content="https://devsp741.github.io/image-converter/">
     <meta property="og:type" content="website">
 
@@ -17,24 +21,35 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Free Image Converter - Convert All Image Formats Online">
     <meta name="twitter:description" content="Convert your images for free and securely. We do not store your images – processed and deleted instantly.">
-    <meta name="twitter:image" content="./assets/favicon-32x32.png">
+    <meta name="twitter:image" content="assets/favicon-32x32.png">
 
-    <!-- Favicon Icons -->
-    <link rel="icon" href="./assets/favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
-    <link rel="manifest" href="./assets/site.webmanifest">
-
+    <!-- Favicon and Themeing -->
+    <link rel="icon" href="assets/favicon.ico" sizes="any">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+    <link rel="manifest" href="assets/site.webmanifest">
     <meta name="theme-color" content="#ffffff">
+
+    <!-- === PERFORMANCE OPTIMIZATION === -->
+    
+    <!-- 1. Preload the icon font to prevent layout shifts. It's the most important font file. -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.13.1/font/fonts/bootstrap-icons.woff2?e34853135f9e39acf64315236852cd5a" as="font" type="font/woff2" crossorigin="anonymous">
+
+    <!-- 2. Load CRITICAL CSS (Bootstrap & your main styles) normally. -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
 
-    <!-- Bootstrap Icons (CDN) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.13.1/font/bootstrap-icons.min.css" integrity="sha512-t7Few9xlddEmgd3oKZQahkNI4dS6l80+eGEzFQiqtyVYdvcSG2D3Iub77R20BdotfRPA9caaRkg1tyaJiPmO0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- 3. Load NON-CRITICAL CSS (icons) in a non-blocking way. -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.13.1/font/bootstrap-icons.min.css" integrity="sha512-t7Few9xlddEmgd3oKZQahkNI4dS6l80+eGEzFQiqtyVYdvcSG2D3Iub77R20BdotfRPA9caaRkg1tyaJiPmO0g==" crossorigin="anonymous" referrerpolicy="no-referrer" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.13.1/font/bootstrap-icons.min.css"></noscript>
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="./assets/css/style.css">
-
+    <!-- 4. Defer JavaScript loading. This moves them from the bottom of <body> to the <head>. -->
+    <!-- They will download in parallel and execute after the page is parsed, in order. -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous" defer></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous" defer></script>
+    <script src="script.js" defer></script>
+    
+    <!-- Schema for SEO -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -44,9 +59,6 @@
         "description": "Free online image converter supporting formats like JPG, PNG, WebP, and more. No data stored. Secure and fast conversions."
     }
     </script>
-
-    <!-- Canonical URL for SEO -->
-    <link rel="canonical" href="https://devsp741.github.io/image-converter/">
 </head>
 
 <body>
@@ -185,13 +197,6 @@
         </footer>
     </div>
 
-    <!-- Bootstrap JS Bundle (Popper included) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-
-    <!-- Custom JS -->
-    <script src="./script.js"></script>
 </body>
 
 </html>
